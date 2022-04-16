@@ -7,8 +7,8 @@ const userModel = require("../models/userModel");
 const Razorpay = require("razorpay");
 let { KEY_ID, KEY_SECRET } = process.env||require("../secrets");
 var razorpay = new Razorpay({
-    key_id: KEY_ID,
-    key_secret: KEY_SECRET,
+    key_id:process.env||KEY_ID,
+    key_secret:process.env||KEY_SECRET
 });
 
 
