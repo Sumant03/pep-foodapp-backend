@@ -1,7 +1,7 @@
 const express =require("express");
 const userRouter=express.Router();
 const userModel=require("../models/userModel");
-const {key}=require("../secrets");
+const {key}=process.env||require("../secrets");
 // const jwt = require('jsonwebtoken');
 const {bodyChecker,protectRoute,isAuthorized}=require("./myMiddleWare");
 const { next } = require("cheerio/lib/api/traversing");

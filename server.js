@@ -22,7 +22,7 @@ app.use('/plan',planRouter);
 app.use('/review',reviewRouter);
 app.use('/booking',bookingRouter);
 
-app.listen(8081,function(){
+app.listen(process.env.PORT||8081,function(){
     console.log("server started");
 })
 

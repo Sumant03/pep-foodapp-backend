@@ -1,7 +1,7 @@
 const { val } = require("cheerio/lib/api/attributes");
 const { validate } = require("email-validator");
 const mongoose=require("mongoose");
-let {PASSWORD}=require("../secrets");
+let {PASSWORD}=process.env||require("../secrets");
 let db_link= `mongodb+srv://admin:${PASSWORD}@cluster0.ankfz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const validator = require("email-validator");
 

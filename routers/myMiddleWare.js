@@ -1,6 +1,6 @@
 const express =require("express");
-const key=require("../secrets");
-const jwt = require('jsonwebtoken');
+const key=process.env||require("../secrets");
+const jwt = process.env||require('jsonwebtoken');
 const userModel=require("../models/userModel");
 
 
