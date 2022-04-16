@@ -41,6 +41,7 @@ const initiateBooking =async function(req,res){
   const currency = "INR";
 
   const options = {
+    key:key_id,
     amount,
     currency,
     receipt: `rs${bookingId}`,
