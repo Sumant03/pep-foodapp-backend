@@ -3,6 +3,7 @@ const mongoose=require("mongoose");
 let {PASSWORD}=process.env||require("../secrets");
 let db_link= `mongodb+srv://admin:${PASSWORD}@cluster0.ankfz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const validator = require("email-validator");
+console.log("working ");
 
 mongoose.connect(db_link).then(
     function(connection){
