@@ -1,4 +1,3 @@
-const { val } = require("cheerio/lib/api/attributes");
 const { validate } = require("email-validator");
 const mongoose=require("mongoose");
 let {PASSWORD}=process.env||require("../secrets");

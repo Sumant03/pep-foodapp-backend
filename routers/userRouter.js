@@ -4,7 +4,7 @@ const userModel=require("../models/userModel");
 const {key}=process.env||require("../secrets");
 // const jwt = require('jsonwebtoken');
 const {bodyChecker,protectRoute,isAuthorized}=require("./myMiddleWare");
-const { next } = require("cheerio/lib/api/traversing");
+
 const res = require("express/lib/response");
 const {createElement,getElement,getElements,deleteElement,updateElement}=require("../helpers/factory");
 
