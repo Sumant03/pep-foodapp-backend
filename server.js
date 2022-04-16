@@ -13,7 +13,7 @@ const bookingRouter=require("./routers/bookingRouter");
 
 app.use(express.json());
 app.use(cookieParser())
-app.use(express.static("public"));
+app.use(express.static("Frontend_folder"));
 
 
 app.use('/user',userRouter);
@@ -27,9 +27,10 @@ app.listen(process.env.PORT||8081,function(){
 })
 
 //404 Error
-app.use(function(req,res){
-    res.status(400).json({
-         message:"404 page not found"
+app.use(function (req, res) {
+    // console.log("fullPath", fullPath);
+    res.status(404).json({
+        message: "page Not found"
     })
 })
 
